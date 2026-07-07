@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f6f8;
+  color: #121417;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+.sales-table th,
+.sales-table td {
+  border-bottom: 1px solid #e2e5ea;
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.sales-table th {
+  color: #5c6675;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.sales-table tbody tr:hover {
+  background: #fafafa;
+}
