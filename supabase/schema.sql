@@ -156,7 +156,7 @@ security definer
 set search_path = public
 as $$
 begin
-  if auth.uid() = old.id and not public.is_team_admin(old.team_id) then
+  if old.team_id is not null and auth.uid() = old.id and not public.is_team_admin(old.team_id) then
     new.role = old.role;
     new.team_id = old.team_id;
   end if;
