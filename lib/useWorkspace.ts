@@ -41,7 +41,7 @@ export function useWorkspace(requireTeam = true): WorkspaceState {
       error: authError
     } = await config.client.auth.getUser();
 
-    if (authError) {
+    if (authError && authError.name !== "AuthSessionMissingError") {
       setError(authError.message);
       setLoading(false);
       return;
